@@ -101,7 +101,7 @@ async function simulateActivity(page) {
             setTimeout(() => window.scrollTo(0, 0), 1000);
         });
         console.log(`Activity simulated at ${new Date().toLocaleTimeString()}`);
-        await takeScreenshot(page, 'Activity simulation');
+        // await takeScreenshot(page, 'Activity simulation');
     } catch (error) {
         console.error('Error during activity simulation:', error.message);
     }
@@ -111,7 +111,7 @@ async function findAndClickStartButton(page) {
     console.log('Looking for Start button on DVA page...');
     
     try {
-        await takeScreenshot(page, 'Before finding Start button');
+        // await takeScreenshot(page, 'Before finding Start button');
         
         const currentUrl = page.url();
         if (!currentUrl.includes('/dataAgent')) {
@@ -166,7 +166,7 @@ async function findAndClickStartButton(page) {
 
         if (buttonFound) {
             console.log('Successfully clicked Start button');
-            await takeScreenshot(page, 'After clicking Start button');
+            // await takeScreenshot(page, 'After clicking Start button');
             return true;
         }
 
@@ -177,7 +177,7 @@ async function findAndClickStartButton(page) {
 
     } catch (error) {
         console.error('Error finding Start button:', error);
-        await takeScreenshot(page, 'Error state');
+        // await takeScreenshot(page, 'Error state');
         return false;
     }
 }
@@ -247,7 +247,7 @@ async function main() {
         
     } catch (error) {
         console.error('Error during execution:', error);
-        await takeScreenshot(page, 'Fatal error');
+        // await takeScreenshot(page, 'Fatal error');
         await browser.close();
         process.exit(1);
     }
