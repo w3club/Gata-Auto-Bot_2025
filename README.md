@@ -42,7 +42,7 @@ node index.js
 1. **F12 or Inspect Element**
    Go to Aplication - then Local Storage :
   
-   ![Settings](./settings.PNG)
+   ![Settings](./Settings.PNG)
 
 ## ⚙️ Configuration
 
